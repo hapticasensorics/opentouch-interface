@@ -37,10 +37,14 @@ setup(
         "pandas",
         "altair",
         "onnx",
+        "fastapi",
+        "uvicorn",
+        "rerun-sdk",
     ],
     entry_points={
         'console_scripts': [
-            'opentouch-dashboard = opentouch_interface.dashboard.start:main'
+            'opentouch-dashboard = opentouch_interface.dashboard.start:main',
+            'opentouch_to_rrd = opentouch_interface.rerun.cli:main',
         ],
     },
     author='Roberto Calandra',
